@@ -2,11 +2,97 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Résultats des examens - Université des Comores</title>
+  <title>Résultats AES-L3 Université des Comores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: green;
+    }
+    input {
+      padding: 8px;
+      margin-top: 10px;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenue sur le site des résultats des examens</h1>
-  <p>Les résultats seront disponibles prochainement.</p>
+  <h1>Université des Comores - Résultats AES-L3</h1>
+  <p>Tapez votre matricule :</p>
+  <input type="text" id="matricule" placeholder="Tapez votre matricule " onkeyup="chercher()">
+
+  <table id="resultatTable">
+    <thead>
+      <tr>
+        <th>Matricule</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Moyenne</th>
+        <th>Résultat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>59493</td><td>ABALHASSANE</td><td>SAID MROIVILI</td><td>12.50</td><td>Admis.e</td></tr>
+      <tr><td>65826</td><td>ABDALLAH</td><td>OUMRATI</td><td>11.20</td><td>Admis.e</td></tr>
+      <tr><td>62282</td><td>ABDOU HOUSSEIN</td><td>DOUHOUZE</td><td>09.50</td><td>Ajourné.e</td></tr>
+      <tr><td>55416</td><td>ABDOULANZIZE</td><td>MOHAMED</td><td>13.75</td><td>Admis.e</td></tr>
+      <tr><td>53169</td><td>ABDOULFATAH</td><td>ALI MMADI</td><td>13.00</td><td>Admis.e</td></tr>
+	  <tr><td>67872</td><td>ABDOURHAMANE</td><td>NAFAI</td><td>12.05</td><td>Admis.e</td></tr>
+	  <tr><td>64592</td><td>ABOUCARIA</td><td>DJAMIL AHAMADA</td><td>11.05</td><td>Admis.e</td></tr>
+	  <tr><td>68116</td><td>AHAMADA</td><td>ROUKIA</td><td>10.00</td><td>Admis.e</td></tr>
+	  <tr><td>66406</td><td>AICHA</td><td>ABDILALAH</td><td>12.05</td><td>Admis.e</td></tr>
+	  <tr><td>64967</td><td>ALI</td><td>AHAMADA</td><td>09.66</td><td>Ajourné.e</td></tr>
+	  <tr><td>6798</td><td>ALI</td><td>SADONI GAMAL</td><td>11.05</td><td>Admis.e</td></tr>
+	  <tr><td>60879</td><td>AMATOULLAH</td><td>MAHAMOUD</td><td>12.04</td><td>Admis.e</td></tr>
+	  <tr><td>63539</td><td>AMINA</td><td>ABDILLAH</td><td>10.95</td><td>Admis.e</td></tr>
+	  <tr><td>55516</td><td>AMINA</td><td>RACHID</td><td>13.50</td><td>Admis.e</td></tr>
+	  <tr><td>62936</td><td>ANDHUMATA</td><td>AHMED ALI</td><td>10.12</td><td>Admis.e</td></tr>
+	  <tr><td>66112</td><td>ANDJOUZA</td><td>ALI SAID</td><td>11.13</td><td>Admis.e</td></tr>
+	  <tr><td>45218</td><td>ANHADILLAH</td><td>ABDILLAH</td><td>08.99</td><td>Ajourné.e</td></tr>
+	  <tr><td>65260</td><td>ANISSATI</td><td>HALIBA</td><td>13.03</td><td>Admis.e</td></tr>
+	  <tr><td>68543</td><td>ANTIFATI</td><td>FATHI</td><td>13.25</td><td>Admis.e</td></tr>
+	  <tr><td>64026</td><td>ANZRA</td><td>AHMED ALLAOUI</td><td>07.56</td><td>Ajourné.e</td></tr>
+	  <tr><td>55782</td><td>AZAD</td><td>ABDOU</td><td>09.27</td><td>Ajourné.e</td></tr>
+	  <tr><td>57676</td><td>BADROUDINE</td><td>ATHOUMANI</td><td>12.00</td><td>Admis.e</td></tr>
+	  <tr><td>57660</td><td>BIHINDI</td><td>MIDILADJI</td><td>08.00</td><td>Ajourné.e</td></tr>
+	  <tr><td>60990</td><td>RAIKA</td><td>PAPA</td><td>10.00</td><td>Admis.e</td></tr>
+	  <tr><td>60995</td><td>ROUMLY</td><td>FAKOUR CHAMSIA</td><td>11.00</td><td>Admis.e</td></tr>
+	  <tr><td>45367</td><td>TAOUHIDA</td><td>ABDILLAH</td><td>09.00</td><td>Ajourné.e</td></tr>
+	  <tr><td>52036</td><td>MOUSLIM</td><td>HASSAN</td><td>10.56</td><td>Admis.e</td></tr>
+	  <tr><td>65559</td><td>MWENGNE ANLIM</td><td>ABACAR CHAFFI</td><td>09.99</td><td>Ajourné.e</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    function chercher() {
+      const saisie = document.getElementById('matricule').value.toLowerCase();
+      const lignes = document.querySelectorAll('#resultatTable tbody tr');
+
+      lignes.forEach(tr => {
+        const matricule = tr.children[0].textContent.toLowerCase();
+        if (matricule.includes(saisie) && saisie !== "") {
+          tr.style.display = "";
+        } else if (saisie === "") {
+          tr.style.display = "";
+        } else {
+          tr.style.display = "none";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
